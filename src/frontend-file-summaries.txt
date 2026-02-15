@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Root application component that renders the ValentineLetter component as the main experience.",
+  "frontend/src/components/ValentineLetter.tsx": "Main orchestrator component managing Valentine's letter flow (front page, envelope opening, message with Yes/No buttons, video playback) with romantic parchment design, decorative floating hearts, paper-textured cards with floral accents, helper text for ~31s video selection, and smooth view transitions.",
+  "frontend/src/components/Envelope.tsx": "Animated envelope component with romantic paper texture, rose-colored flap, gold wax seal, and parchment letter that rises during opening animation, featuring decorative heart accents and warm handwritten typography.",
+  "frontend/src/components/RunawayNoButton.tsx": "Interactive \"No\" button with romantic paper styling that playfully repositions itself within a bounded container when hovered or tapped, using smooth transform-based movement and changing text after first escape attempt.",
+  "frontend/src/components/VideoView.tsx": "Video player view with romantic parchment frame, decorative floral corners and floating hearts, autoplay with sound (no loop), playback-blocked prompt for user interaction, native controls, empty state with heart icon, and romantic Valentine's message below video.",
+  "frontend/src/hooks/useObjectUrl.ts": "Custom hook that creates and manages object URLs for File objects, automatically revoking them on cleanup to prevent memory leaks.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as this frontend-only Valentine's letter app requires no backend queries.",
+  "frontend/src/index.css": "Complete romantic love-letter styling system with warm parchment colors (cream/rose/gold), handwritten typography (Dancing Script/Crimson Text), paper texture utilities, decorative accent positioning (hearts/florals), romantic button styles, envelope animations, and responsive design with reduced-motion support.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with romantic love-letter theme including parchment/rose/gold/ink color tokens, handwritten and serif font families (Dancing Script, Crimson Text), and custom design system mapped to the warm aesthetic."
+}

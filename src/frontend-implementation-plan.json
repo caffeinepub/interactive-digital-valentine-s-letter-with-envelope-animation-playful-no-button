@@ -1,0 +1,113 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Love-letter visual revamp + 31s video playback UX polish",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Revamp all Valentine letter views with a cohesive warm handwritten love-letter aesthetic (parchment, romantic typography, subtle accents) while preserving responsiveness and touch usability.",
+      "acceptanceCriteria": [
+        "Front page, envelope/opening view, message card, buttons, and video view all share a consistent warm/soft love-letter theme (no harsh/techy look).",
+        "Message container(s) visually resemble paper/parchment (texture + paper-like shading) rather than a plain translucent white card.",
+        "Typography reads as romantic/handwritten (title/message/script styles updated consistently) and remains readable on phone and desktop.",
+        "Decorative elements (tiny hearts/floral accents) are subtle, non-distracting, and do not obstruct text or controls.",
+        "All changes preserve responsiveness and touch-friendliness across common mobile and desktop sizes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global love-letter theme styles: refine warm palette, improve handwritten/romantic typography stacks (readable on mobile/desktop), add parchment-like paper styling utilities (texture overlay hooks, paper shading, subtle edge/crease effects), and define reusable accent positioning utilities that keep decorations non-interactive (e.g., pointer-events none) and non-overlapping with controls."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens to support the revamped love-letter look (e.g., additional warm neutrals/rose/gold accents and font families mapped to the updated typography), keeping usage consistent across all views."
+        },
+        {
+          "path": "frontend/src/components/ValentineLetter.tsx",
+          "operation": "modify",
+          "description": "Apply the cohesive love-letter layout across front page and message view: wrap content in a parchment-style surface, place subtle decorative accents (hearts/floral) without obstructing text/buttons, and update button and card styling to feel handwritten/cozy. Continue composing (not modifying) the shadcn-ui Button component for controls; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/Envelope.tsx",
+          "operation": "modify",
+          "description": "Restyle envelope and letter visuals to match the new parchment/handwritten theme (paper-like letter surface, warm tones, subtle texture/accents) while keeping the existing opening animation and responsive sizing intact."
+        },
+        {
+          "path": "frontend/src/components/VideoView.tsx",
+          "operation": "modify",
+          "description": "Update the video view container and surrounding text to match the love-letter theme (parchment-like frame, subtle accent art, cohesive typography) while keeping controls accessible. Continue composing (not modifying) the shadcn-ui Button component for the Back control; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add generated parchment texture and accent artwork under frontend/public/assets/generated and render them directly in the React UI (no backend involvement).",
+      "acceptanceCriteria": [
+        "New image assets are present under frontend/public/assets/generated and are referenced directly by the React UI.",
+        "Texture usage is tasteful (low-contrast) and does not reduce legibility of any text.",
+        "Accent illustrations are placed in a way that scales appropriately on small screens and do not overlap primary interactions (Yes/No buttons, upload button, Back button, video controls)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/parchment-texture.dim_2000x2000.png",
+          "operation": "create",
+          "description": "Add generated seamless parchment texture image asset (warm cream tone with subtle fiber/grain) for use as a low-contrast UI background texture."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-doodle-accent.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated tiny heart doodle accent image asset (minimal line-art, warm red/rose) for subtle decorative placement."
+        },
+        {
+          "path": "frontend/public/assets/generated/floral-corner-accent.dim_512x512.png",
+          "operation": "create",
+          "description": "Add generated small floral corner accent image asset (delicate line-art, warm rose/gold) for subtle corner decoration."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Wire the generated assets into reusable CSS utilities (referencing frontend/public/assets/generated/parchment-texture.dim_2000x2000.png, frontend/public/assets/generated/heart-doodle-accent.dim_256x256.png, frontend/public/assets/generated/floral-corner-accent.dim_512x512.png) to support paper-texture backgrounds and subtle corner/edge accents with safe z-index and non-overlapping placement rules."
+        },
+        {
+          "path": "frontend/src/components/ValentineLetter.tsx",
+          "operation": "modify",
+          "description": "Render the generated parchment texture and accent images in the front/message views (direct static references via the public assets) with responsive positioning so they do not overlap primary interactions (Yes/No buttons and upload button)."
+        },
+        {
+          "path": "frontend/src/components/Envelope.tsx",
+          "operation": "modify",
+          "description": "Render the parchment texture and subtle accent imagery within the envelope/letter presentation (direct static references via the public assets), keeping accents decorative and non-blocking for the animation."
+        },
+        {
+          "path": "frontend/src/components/VideoView.tsx",
+          "operation": "modify",
+          "description": "Render the parchment texture and subtle accent imagery in the video view frame/background (direct static references via the public assets) while ensuring video controls remain fully accessible and unobstructed."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Clarify the ~31s video upload intent and ensure playback starts with sound when permitted, does not loop, and has a clear empty state with a path back to selection.",
+      "acceptanceCriteria": [
+        "In the message view, the video upload control includes helper text indicating the selected short video (e.g., ~31 seconds) will play when “Yes” is clicked.",
+        "When a user selects a video file and clicks “Yes”, the video auto-starts if allowed by the browser and is not intentionally muted by the app.",
+        "The video element does not force loop; it reaches the end and stops naturally (user can replay via controls).",
+        "If no video is selected, the video view continues to show a clear empty-state message and a way to go back and choose a video."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineLetter.tsx",
+          "operation": "modify",
+          "description": "Add concise helper text near the video upload control explaining that a short (~31s) video can be selected and will play when “Yes” is clicked; keep copy readable and consistent with the new love-letter theme. Continue composing (not modifying) the shadcn-ui Button component for upload/Yes controls; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/VideoView.tsx",
+          "operation": "modify",
+          "description": "Ensure playback behavior supports a user-provided ~31s video: do not set looping, do not intentionally mute, attempt autoplay on entry, and if autoplay is blocked provide an in-context prompt to start playback with sound while keeping native controls available. Keep the empty state prominent and ensure the Back control remains available to return and choose a video. Continue composing (not modifying) the shadcn-ui Button component for the Back control; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

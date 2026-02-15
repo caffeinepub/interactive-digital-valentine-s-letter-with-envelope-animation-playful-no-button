@@ -1,2 +1,3 @@
-# interactive-digital-valentine-s-letter-with-envelope-animation-playful-no-button
-Exported from Caffeine project: Interactive digital Valentine’s letter with envelope animation, playful No button, and replaceable video
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Interactive, responsive web-based digital Valentine’s letter with an envelope opening animation, playful Yes/No buttons (No runs away), and a replaceable video that plays with sound when Yes is clicked.",
+  "architectural_notes": [
+    "Target modern web browsers; implement responsive/touch-friendly interactions (mouse + touch) with smooth, lightweight animations.",
+    "Incorporate a handwritten love-letter aesthetic: warm soft palette, romantic typography, subtle paper/parchment texture, and small heart/floral decorative accents while keeping the UI readable and responsive."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Seamless parchment paper texture, warm cream tone with subtle fiber/grain (parchment-texture.dim_2000x2000.png)\n- Tiny heart doodle accent, minimal line-art, warm red/rose (heart-doodle-accent.dim_256x256.png)\n- Small floral corner accent, delicate line-art, warm rose/gold (floral-corner-accent.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-interactive-valentine-s-letter-ui-with-a-front-page-that-has-a-solid-pink-background-and-displays-the-text-to-my-dear-kanmani-in-a-black-cursive-style-font-clicking-tapping-anywhere-on-the-front-page-or-the-envelope-element-must-transition-to-the-opened-letter-view",
+      "title": "Create a single-page interactive Valentine’s letter UI with a front page that has a solid pink background and displays the text “To my dear Kanmani” in a black cursive-style font; clicking/tapping anywhere on the front page (or the envelope element) must transition to the opened letter view.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-envelope-opening-animation-that-smoothly-reveals-the-message-text-will-you-be-mine-valentine-kanmani-and-then-displays-two-buttons-labeled-yes-and-no",
+      "title": "Implement an envelope opening animation that smoothly reveals the message text “Will you be mine, Valentine Kanmani?” and then displays two buttons labeled “Yes” and “No”.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-playful-interactivity-to-the-no-button-so-that-when-a-user-tries-to-hover-it-mouse-or-approach-tap-it-touch-the-button-moves-away-within-the-visible-container-making-it-difficult-but-not-impossible-to-click",
+      "title": "Add playful interactivity to the “No” button so that when a user tries to hover it (mouse) or approach/tap it (touch), the button moves away within the visible container, making it difficult (but not impossible) to click.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-yes-button-trigger-playback-of-a-user-supplied-video-with-sound-with-a-smooth-transition-from-the-letter-buttons-view-to-the-video-player-view",
+      "title": "Make the “Yes” button trigger playback of a user-supplied video with sound, with a smooth transition from the letter/buttons view to the video player view.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-an-integrated-easy-video-replacement-upload-option-in-the-ui-so-the-user-can-select-a-local-video-file-to-be-used-for-the-yes-playback-the-selected-video-should-be-used-immediately-without-requiring-a-backend-upload",
+      "title": "Provide an integrated, easy video replacement/upload option in the UI so the user can select a local video file to be used for the “Yes” playback; the selected video should be used immediately without requiring a backend upload.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-experience-is-fully-responsive-and-touch-friendly-across-laptop-tablet-phone-screen-sizes-including-appropriately-sized-tap-targets-readable-typography-and-layout-that-adapts-to-portrait-and-landscape-orientations",
+      "title": "Ensure the entire experience is fully responsive and touch-friendly across laptop/tablet/phone screen sizes, including appropriately sized tap targets, readable typography, and layout that adapts to portrait and landscape orientations.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optimize-animations-and-transitions-envelope-opening-button-motion-view-transitions-to-remain-lightweight-and-smooth-avoiding-heavy-effects-that-cause-lag-on-modern-browsers",
+      "title": "Optimize animations and transitions (envelope opening, button motion, view transitions) to remain lightweight and smooth, avoiding heavy effects that cause lag on modern browsers.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-creative-visual-theme-appropriate-for-a-valentine-s-letter-colors-typography-pairing-spacing-and-component-styling-and-enforce-it-consistently-across-the-front-page-letter-envelope-view-buttons-and-video-view-avoid-blue-purple-as-primary-colors",
+      "title": "Apply a coherent, creative visual theme appropriate for a Valentine’s letter (colors, typography pairing, spacing, and component styling) and enforce it consistently across the front page, letter/envelope view, buttons, and video view (avoid blue/purple as primary colors).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-valentine-letter-ui-visual-design-to-feel-like-a-heartfelt-handwritten-love-letter-warm-soft-colors-elegant-romantic-handwriting-style-fonts-visually-appealing-cozy-layout-gentle-parchment-paper-textures-and-subtle-decorative-accents-tiny-hearts-or-floral-elements-across-the-front-page-envelope-letter-message-card-buttons-and-video-view",
+      "title": "Update the Valentine letter UI visual design to feel like a heartfelt handwritten love letter: warm, soft colors; elegant romantic handwriting-style fonts; visually appealing cozy layout; gentle parchment/paper textures; and subtle decorative accents (tiny hearts or floral elements) across the front page, envelope/letter, message card, buttons, and video view.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-parchment-paper-texture-and-subtle-decorative-accent-artwork-as-generated-image-assets-store-them-under-frontend-public-assets-generated-and-render-them-in-the-ui-to-support-the-handwritten-love-letter-aesthetic-without-using-the-backend-to-serve-or-transform-images",
+      "title": "Add static parchment/paper texture and subtle decorative accent artwork as generated image assets, store them under frontend/public/assets/generated, and render them in the UI to support the handwritten love-letter aesthetic (without using the backend to serve or transform images).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-video-selection-and-playback-flow-clearly-supports-a-user-provided-31-second-video-the-ui-should-communicate-that-a-short-e-g-31s-video-can-be-used-and-the-video-playback-should-play-with-sound-and-end-naturally-no-forced-looping",
+      "title": "Ensure the video selection and playback flow clearly supports a user-provided ~31-second video: the UI should communicate that a short (e.g., 31s) video can be used, and the video playback should play with sound and end naturally (no forced looping).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Front page with pink background and black cursive text “To my dear Kanmani”, clickable to open envelope/letter",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Envelope opening animation that reveals the message “Will you be mine, Valentine Kanmani?”",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Display Yes/No buttons after reveal; No button playfully runs away on hover/tap to avoid being clicked",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Yes button triggers playback of a user-supplied video with sound",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Integrate an easy video replacement/upload option for the Yes-button video",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Ensure full responsiveness and touch-friendly interactions across laptop/tablet/phone with smooth transitions and lightweight performance",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update letter visual design to feel like a heartfelt handwritten love letter (warm soft colors, romantic/elegant fonts, parchment/paper texture, subtle hearts/floral accents, cozy intimate layout)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Interactive digital Valentine’s letter with envelope animation, playful No button, and replaceable video",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

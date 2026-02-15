@@ -1,0 +1,90 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T19:26:41.133Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Add static parchment/paper texture and subtle decorative accent artwork as generated image assets, store them under frontend/public/assets/generated, and render them in the UI to support the handwritten love-letter aesthetic (without using the backend to serve or transform images).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/parchment-texture.dim_2000x2000.png",
+          "frontend/public/assets/generated/heart-doodle-accent.dim_256x256.png",
+          "frontend/public/assets/generated/floral-corner-accent.dim_512x512.png",
+          "frontend/src/index.css",
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/Envelope.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/parchment-texture.dim_2000x2000.png",
+          "frontend/public/assets/generated/heart-doodle-accent.dim_256x256.png",
+          "frontend/public/assets/generated/floral-corner-accent.dim_512x512.png",
+          "frontend/src/index.css",
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/Envelope.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Ensure the video selection and playback flow clearly supports a user-provided ~31-second video: the UI should communicate that a short (e.g., 31s) video can be used, and the video playback should play with sound and end naturally (no forced looping).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Update the Valentine letter UI visual design to feel like a heartfelt handwritten love letter: warm, soft colors; elegant romantic handwriting-style fonts; visually appealing cozy layout; gentle parchment/paper textures; and subtle decorative accents (tiny hearts or floral elements) across the front page, envelope/letter, message card, buttons, and video view.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/Envelope.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/ValentineLetter.tsx",
+          "frontend/src/components/Envelope.tsx",
+          "frontend/src/components/VideoView.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/floral-corner-accent.dim_512x512.png",
+    "frontend/public/assets/generated/heart-doodle-accent.dim_256x256.png",
+    "frontend/public/assets/generated/parchment-texture.dim_2000x2000.png",
+    "frontend/src/components/Envelope.tsx",
+    "frontend/src/components/RunawayNoButton.tsx",
+    "frontend/src/components/ValentineLetter.tsx",
+    "frontend/src/components/VideoView.tsx",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

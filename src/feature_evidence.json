@@ -1,0 +1,67 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-valentine-letter-ui-visual-design-to-feel-like-a-heartfelt-handwritten-love-letter-warm-soft-colors-elegant-romantic-handwriting-style-fonts-visually-appealing-cozy-layout-gentle-parchment-paper-textures-and-subtle-decorative-accents-tiny-hearts-or-floral-elements-across-the-front-page-envelope-letter-message-card-buttons-and-video-view",
+      "featureTitle": "Update the Valentine letter UI visual design to feel like a heartfelt handwritten love letter: warm, soft colors; elegant romantic handwriting-style fonts; visually appealing cozy layout; gentle parchment/paper textures; and subtle decorative accents (tiny hearts or floral elements) across the front page, envelope/letter, message card, buttons, and video view.",
+      "files": [
+        "frontend/src/components/Envelope.tsx",
+        "frontend/src/components/ValentineLetter.tsx",
+        "frontend/src/components/VideoView.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-static-parchment-paper-texture-and-subtle-decorative-accent-artwork-as-generated-image-assets-store-them-under-frontend-public-assets-generated-and-render-them-in-the-ui-to-support-the-handwritten-love-letter-aesthetic-without-using-the-backend-to-serve-or-transform-images",
+      "featureTitle": "Add static parchment/paper texture and subtle decorative accent artwork as generated image assets, store them under frontend/public/assets/generated, and render them in the UI to support the handwritten love-letter aesthetic (without using the backend to serve or transform images).",
+      "files": [
+        "frontend/src/components/Envelope.tsx",
+        "frontend/src/components/ValentineLetter.tsx",
+        "frontend/src/components/VideoView.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-video-selection-and-playback-flow-clearly-supports-a-user-provided-31-second-video-the-ui-should-communicate-that-a-short-e-g-31s-video-can-be-used-and-the-video-playback-should-play-with-sound-and-end-naturally-no-forced-looping",
+      "featureTitle": "Ensure the video selection and playback flow clearly supports a user-provided ~31-second video: the UI should communicate that a short (e.g., 31s) video can be used, and the video playback should play with sound and end naturally (no forced looping).",
+      "files": [
+        "frontend/src/components/ValentineLetter.tsx",
+        "frontend/src/components/VideoView.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Minimal Motoko canister defining an empty actor.",
+  "feature_evidence.json": "Feature evidence listing Valentine UI updates, static assets, and video playback requirements with associated files.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing purpose and design of each frontend component and styling file.",
+  "frontend/index.css": "Tailwind base, components, and utility layers plus custom CSS variables for light/dark themes.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Root component that renders the ValentineLetter experience.",
+  "frontend/src/components/Envelope.tsx": "Animated envelope component that triggers an opening sequence and completion callback.",
+  "frontend/src/components/RunawayNoButton.tsx": "Playful No button that moves randomly within a container when interacted with.",
+  "frontend/src/components/ValentineLetter.tsx": "Main flow controller switching between front, envelope, message, and video views with video upload support.",
+  "frontend/src/components/VideoView.tsx": "Video player view that attempts autoplay with sound, shows a manual play prompt if blocked, and includes decorative accents.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing a backend actor based on Internet Identity and refreshing dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity authentication, including loading stored identities and handling login state.",
+  "frontend/src/hooks/useObjectUrl.ts": "React hook that generates and cleans up an object URL for a File, automatically revoking it on unmount or file change.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file indicating no backend queries are needed for the app.",
+  "frontend/src/index.css": "Tailwind base styles plus custom color variables, parchment textures, typography, and decorative utility classes for the Valentine theme.",
+  "frontend/src/main.tsx": "App entry point that sets up React rendering with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending colors, fonts, container settings, and plugins to match the project's romantic design palette.",
+  "project_state.json": "Project metadata describing the Valentine's app features, design goals, required assets, and completed functionality."
+}
